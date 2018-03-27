@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+
 from djangoplus.db import models
 from enderecos.models import Endereco
 
@@ -27,7 +27,7 @@ class Pessoa(models.Model):
         verbose_female = True
         select_display = 'nome', 'documento'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.nome
 
     def can_add(self):
