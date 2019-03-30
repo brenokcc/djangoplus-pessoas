@@ -10,10 +10,12 @@ djangoplus_pessoas.egg-info/top_level.txt
 pessoas/__init__.py
 pessoas/models.py
 pessoas/migrations/0001_initial.py
-pessoas/migrations/0001_initial.pyc
+pessoas/migrations/0001_squashed_0003_auto_20170911_1642.py
 pessoas/migrations/0002_pessoa_tipo.py
-pessoas/migrations/0002_pessoa_tipo.pyc
 pessoas/migrations/0003_auto_20170911_1642.py
-pessoas/migrations/0003_auto_20170911_1642.pyc
 pessoas/migrations/__init__.py
-pessoas/migrations/__init__.pyc
+pessoas/migrations/__pycache__/0001_initial.cpython-37.pyc
+pessoas/migrations/__pycache__/0001_squashed_0003_auto_20170911_1642.cpython-37.pyc
+pessoas/migrations/__pycache__/0002_pessoa_tipo.cpython-37.pyc
+pessoas/migrations/__pycache__/0003_auto_20170911_1642.cpython-37.pyc
+pessoas/migrations/__pycache__/__init__.cpython-37.pyc

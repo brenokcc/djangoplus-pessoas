@@ -35,12 +35,14 @@ class Pessoa(models.Model):
 
 
 class PessoaFisicaAbstrata(Pessoa):
+    foto = models.ImageField(verbose_name='Foto', null=True, blank=True, upload_to='alunos', default='/static/images/user.png')
+    sexo = models.CharField(verbose_name='Sexo', choices=[['M', 'Masculino'], ['F', 'Feminino']], null=True, example='Masculino')
 
     cpf = models.CpfField(verbose_name='CPF', search=True, example='000.000.000-00')
     data_nascimento = models.DateField(verbose_name='Data de Nascimento', null=True, blank=True, example='27/08/1984')
 
     fieldsets = (
-        ('Dados Gerais', {'fields': ('nome', ('cpf', 'data_nascimento'))}),
+        ('Dados Gerais', {'fields': (('nome', 'sexo'), ('cpf', 'data_nascimento')), 'image': 'foto'}),
         ('Endereço', {'fields': ('endereco',)}),
         ('Contatos', {'fields': (('telefone', 'email'),)})
     )
@@ -59,7 +61,7 @@ class PessoaFisicaAbstrata(Pessoa):
 
 class PessoaJuridicaAbstrata(Pessoa):
 
-    cnpj = models.CnpjField(verbose_name='CNPJ', search=True, example='00.000.000/0001-00')
+    cnpj = models.CnpjField(verbose_name='CNPJ', search=True, example='70.187.505/0001-92')
     inscricao_estadual = models.CharField(verbose_name='Inscrição Estadual', null=True, blank=True)
 
     fieldsets = (
